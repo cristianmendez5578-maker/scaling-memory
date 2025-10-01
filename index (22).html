@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gato Bailando con Música</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #303840;
+      position: relative;
+    }
+    #cat {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+    #corner-cat {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 150px;
+      height: auto;
+    }
+    #corner-cat2 {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 150px;
+      height: auto;
+    }
+    #corner-cat3 {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      width: 150px;
+      height: auto;
+    }
+    #corner-cat4 {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 150px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Gato principal a pantalla completa -->
+  <img id="cat" src="https://stickerly.pstatic.net/sticker_pack/prgwLw7Cjwk5lBg1IIbRg/HXQGQY/34/-1928077159.webp" alt="Gato bailando">
+
+  <!-- Gato en la esquina superior derecha -->
+  <img id="corner-cat" src="https://stickerly.pstatic.net/sticker_pack/prgwLw7Cjwk5lBg1IIbRg/HXQGQY/34/-1182716366.webp" alt="Gato esquina superior derecha">
+
+  <!-- Gato en la esquina inferior derecha -->
+  <img id="corner-cat2" src="https://stickerly.pstatic.net/sticker_pack/13279e882d3a25af/DZIEBG/2/r43ergbfvb.webp" alt="Gato esquina inferior derecha">
+
+  <!-- Gato en la esquina inferior izquierda -->
+  <img id="corner-cat3" src="https://stickerly.pstatic.net/sticker_pack/xMkzsPfiaT6PHXZaG3VmQ/5EIWXW/17/f5a6da89-9b65-4df1-aa70-4ae69e6f67e4.webp" alt="Gato esquina inferior izquierda">
+
+  <!-- Nuevo gato en la esquina superior izquierda -->
+  <img id="corner-cat4" src="https://stickerly.pstatic.net/sticker_pack/13279e882d3a25af/DZIEBG/2/STK-20200827-WA0154.webp" alt="Gato esquina superior izquierda">
+
+  <!-- Música -->
+  <audio id="song" src="https://files.catbox.moe/8a07tl.mp4" autoplay loop></audio>
+
+  <script>
+    const song = document.getElementById('song');
+    song.play().catch(() => {
+      document.body.addEventListener('click', () => song.play());
+    });
+  </script>
+
+</body>
+</html>
